@@ -72,25 +72,25 @@ The application uses the following libraries:
   - `midi2str` – converts a MIDI number to a note name.
 
 ### Main Application Functions
-- **`main.py`** - main file.
+
 #### **Loading and Processing Data**
-  - `load_csv()` – loads data from a CSV file.
-  - `update_choice(axis, value)` – selects a data column for X, Y axis, or sound size.
-  - `apply_axis_reversal()` – reverses values on the X and Y axes.
-  - `apply_normalization()` – normalizes values to the range `[0,1]`.
-  - `apply_power()` – transforms values using the degree of freedom.
-  - `calculate_bit_data()` – calculates note durations based on a selected column.
+- `load_csv()` – loads data from a CSV file.
+- `update_choice(axis, value)` – selects a data column for X, Y axis, or sound size.
+- `apply_axis_reversal()` – reverses values on the X and Y axes.
+- `apply_normalization()` – normalizes values to the range `[0,1]`.
+- `apply_power()` – transforms values using the degree of freedom.
+- `calculate_bit_data()` – calculates note durations based on a selected column.
 
 #### **User Interface**
-  - `create_widgets()` – creates interface elements like buttons and menus.
-  - `configure_grid()` – dynamically scales and adjusts the window layout.
+- `create_widgets()` – creates interface elements like buttons and menus.
+- `configure_grid()` – dynamically scales and adjusts the window layout.
 
 #### **Generating and Playing MIDI Files**
-  - `save_midi()` – saves data to a MIDI file.
-  - `play_midi()` – plays a MIDI file using `pygame`.
+- `save_midi()` – saves data to a MIDI file.
+- `play_midi()` – plays a MIDI file using `pygame`.
 
 #### **Data Visualization**
-  - `update_plot()` – draws a plot with normalization and transformations applied.
+- `update_plot()` – draws a plot with normalization and transformations applied.
 
 ## Example Use Case
 
