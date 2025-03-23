@@ -4,14 +4,25 @@ To better understand sonification, I created a tool with a simple graphical inte
 
 ## Project Description
 
-![App Example](images/app.png)
+<p align="center">
+  <img src="dhe1.png" alt="Figure 1 - Program screenshot" width="75%"><br>
+  <b>Figure 4 - Plot panel after importing data</b>
+</p>
 
 The application consists of two main panels: **the settings panel** and **the chart panel**, allowing intuitive management of input data and customization of the musical piece's parameters. If incorrect data is provided, an error message is displayed with appropriate guidance.  
 
-<p align="center">
-  <img src="images/tcf1.png" alt="Figure 1 - Settings panel" width="45%">
-  <img src="images/dcf1.png" alt="Figure 2 - Plot panel" width="45%">
-</p> 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/tcf1.png" width="50%"><br>
+      <b>Figure 3 - Settings panel after importing data</b>
+    </td>
+    <td align="center">
+      <img src="images/dcf1.png" width="50%"><br>
+      <b>Figure 4 - Plot panel after importing data</b>
+    </td>
+  </tr>
+</table>
 
 ### Input Data Handling
 - **Loading CSV files** – done via the **Load CSV** button and selecting a `.csv` file.  
@@ -99,11 +110,11 @@ In this way, **both too large and too small intervals** will be heard as deviati
 <table align="center">
   <tr>
     <td align="center">
-      <img src="images/the1.png" width="45%"><br>
+      <img src="images/the1.png" width="50%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
     <td align="center">
-      <img src="images/dhe1.png" width="45%"><br>
+      <img src="images/dhe1.png" width="50%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
@@ -144,8 +155,16 @@ After setting all parameters:
 1. **Save the result** as a MIDI file for further analysis.  
 2. **Play the track** manually or using the play button.
 
-<p align="center">
-  <img src="images/thf1.png" alt="Figure 5 - Settings panel after all transformations" width="45%">
-  <img src="images/dhf1.png" alt="Figure 6 - Plot panel after all transformations" width="45%">
-</p> 
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/thf1.png" width="50%"><br>
+      <b>Figure 3 - Settings panel after importing data</b>
+    </td>
+    <td align="center">
+      <img src="images/thf1.png" width="50%"><br>
+      <b>Figure 4 - Plot panel after importing data</b>
+    </td>
+  </tr>
+</table>
 
