@@ -5,7 +5,7 @@ To better understand sonification, I created a tool with a simple graphical inte
 ## Project Description
 
 <p align="center" style="border-collapse: collapse; border: none;">
-  <img src="app.png" alt="Figure 1 - Program screenshot" width="90%"><br>
+  <img src="images/app.png" alt="Figure 1 - Program screenshot" width="90%"><br>
   <b>Figure 4 - Plot panel after importing data</b>
 </p>
 
@@ -14,11 +14,11 @@ The application consists of two main panels: **the settings panel** and **the ch
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
     <td align="center" style="border: none;">
-      <img src="images/tcf1.png" width="70%"><br>
+      <img src="images/tcf1.png" width="85%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
     <td align="center" style="border: none;">
-      <img src="images/dcf1.png" width="70%"><br>
+      <img src="images/dcf1.png" width="85%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
@@ -110,11 +110,11 @@ In this way, **both too large and too small intervals** will be heard as deviati
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
     <td align="center" style="border: none;">
-      <img src="images/the1.png" width="70%"><br>
+      <img src="images/the1.png" width="85%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
     <td align="center" style="border: none;">
-      <img src="images/dhe1.png" width="70%"><br>
+      <img src="images/dhe1.png" width="85%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
@@ -158,11 +158,11 @@ After setting all parameters:
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
     <td align="center" style="border: none;">
-      <img src="images/thf1.png" width="70%"><br>
+      <img src="images/thf1.png" width="85%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
     <td align="center" style="border: none;">
-      <img src="images/dhf1.png" width="70%"><br>
+      <img src="images/dhf1.png" width="85%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
