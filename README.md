@@ -159,12 +159,14 @@ After setting all parameters:
   <tr>
     <td align="center" style="border: none;">
       <img src="images/thf1.png" width="85%"><br>
-      <b>Figure 6 - Settings panel after importing data</b>
+      <b>Figure 6 - Settings panel after applying all transformations</b>
     </td>
     <td align="center" style="border: none;">
       <img src="images/dhf1.png" width="85%"><br>
-      <b>Figure 7 - Plot panel after importing data</b>
+      <b>Figure 7 - Plot panel after applying all transformations</b>
     </td>
   </tr>
 </table>
 
+## See also
+- [sonification-tutorials](https://github.com/SYSTEMSounds/sonification-tutorials?tab=readme-ov-file)
