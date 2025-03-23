@@ -5,21 +5,21 @@ To better understand sonification, I created a tool with a simple graphical inte
 ## Project Description
 
 <p align="center" style="border-collapse: collapse; border: none;">
-  <img src="images/app.png" alt="Figure 1 - Program screenshot" width="90%"><br>
-  <b>Figure 4 - Plot panel after importing data</b>
+  <img src="images/app.png" alt="Figure 1 - Program screenshot" width="60%"><br>
+  <b>Figure 1 - Program screenshot</b>
 </p>
 
-The application consists of two main panels: **the settings panel** and **the chart panel**, allowing intuitive management of input data and customization of the musical piece's parameters. If incorrect data is provided, an error message is displayed with appropriate guidance.  
+The application consists of two main panels: **the settings panel** and **the plot panel**, allowing intuitive management of input data and customization of the musical piece's parameters. If incorrect data is provided, an error message is displayed with appropriate guidance.  
 
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
     <td align="center" style="border: none;">
       <img src="images/tcf1.png" width="85%"><br>
-      <b>Figure 3 - Settings panel after importing data</b>
+      <b>Figure 3 - Settings panel</b>
     </td>
     <td align="center" style="border: none;">
       <img src="images/dcf1.png" width="85%"><br>
-      <b>Figure 4 - Plot panel after importing data</b>
+      <b>Figure 4 - Plot panel</b>
     </td>
   </tr>
 </table>
