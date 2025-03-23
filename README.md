@@ -4,21 +4,21 @@ To better understand sonification, I created a tool with a simple graphical inte
 
 ## Project Description
 
-<p align="center">
-  <img src="dhe1.png" alt="Figure 1 - Program screenshot" width="75%"><br>
+<p align="center" style="border-collapse: collapse; border: none;">
+  <img src="app.png" alt="Figure 1 - Program screenshot" width="90%"><br>
   <b>Figure 4 - Plot panel after importing data</b>
 </p>
 
 The application consists of two main panels: **the settings panel** and **the chart panel**, allowing intuitive management of input data and customization of the musical piece's parameters. If incorrect data is provided, an error message is displayed with appropriate guidance.  
 
-<table align="center">
+<table align="center" style="border-collapse: collapse; border: none;">
   <tr>
-    <td align="center">
-      <img src="images/tcf1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/tcf1.png" width="70%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
-    <td align="center">
-      <img src="images/dcf1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/dcf1.png" width="70%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
@@ -107,14 +107,14 @@ Sonification assumptions:
 
 In this way, **both too large and too small intervals** will be heard as deviations from the norm.  
 
-<table align="center">
+<table align="center" style="border-collapse: collapse; border: none;">
   <tr>
-    <td align="center">
-      <img src="images/the1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/the1.png" width="70%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
-    <td align="center">
-      <img src="images/dhe1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/dhe1.png" width="70%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
@@ -155,14 +155,14 @@ After setting all parameters:
 1. **Save the result** as a MIDI file for further analysis.  
 2. **Play the track** manually or using the play button.
 
-<table align="center">
+<table align="center" style="border-collapse: collapse; border: none;">
   <tr>
-    <td align="center">
-      <img src="images/thf1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/thf1.png" width="70%"><br>
       <b>Figure 3 - Settings panel after importing data</b>
     </td>
-    <td align="center">
-      <img src="images/thf1.png" width="50%"><br>
+    <td align="center" style="border: none;">
+      <img src="images/dhf1.png" width="70%"><br>
       <b>Figure 4 - Plot panel after importing data</b>
     </td>
   </tr>
