@@ -5,7 +5,7 @@ To better understand sonification, I created a tool with a simple graphical inte
 ## Project Description
 
 <p align="center" style="border-collapse: collapse; border: none;">
-  <img src="images/app.png" alt="Figure 1 - Program screenshot" width="60%"><br>
+  <img src="images/app.png" alt="Figure 1 - Program screenshot" width="45%"><br>
   <b>Figure 1 - Program screenshot</b>
 </p>
 
@@ -15,11 +15,11 @@ The application consists of two main panels: **the settings panel** and **the pl
   <tr>
     <td align="center" style="border: none;">
       <img src="images/tcf1.png" width="85%"><br>
-      <b>Figure 3 - Settings panel</b>
+      <b>Figure 2 - Settings panel</b>
     </td>
     <td align="center" style="border: none;">
       <img src="images/dcf1.png" width="85%"><br>
-      <b>Figure 4 - Plot panel</b>
+      <b>Figure 3 - Plot panel</b>
     </td>
   </tr>
 </table>
@@ -111,11 +111,11 @@ In this way, **both too large and too small intervals** will be heard as deviati
   <tr>
     <td align="center" style="border: none;">
       <img src="images/the1.png" width="85%"><br>
-      <b>Figure 3 - Settings panel after importing data</b>
+      <b>Figure 4 - Settings panel after importing data</b>
     </td>
     <td align="center" style="border: none;">
       <img src="images/dhe1.png" width="85%"><br>
-      <b>Figure 4 - Plot panel after importing data</b>
+      <b>Figure 5 - Plot panel after importing data</b>
     </td>
   </tr>
 </table>
@@ -159,11 +159,11 @@ After setting all parameters:
   <tr>
     <td align="center" style="border: none;">
       <img src="images/thf1.png" width="85%"><br>
-      <b>Figure 3 - Settings panel after importing data</b>
+      <b>Figure 6 - Settings panel after importing data</b>
     </td>
     <td align="center" style="border: none;">
       <img src="images/dhf1.png" width="85%"><br>
-      <b>Figure 4 - Plot panel after importing data</b>
+      <b>Figure 7 - Plot panel after importing data</b>
     </td>
   </tr>
 </table>
