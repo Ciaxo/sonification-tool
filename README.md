@@ -4,12 +4,14 @@ To better understand sonification, I created a tool with a simple graphical inte
 
 ## Project Description
 
-![App Example](link)
+![App Example](images/app.png)
 
 The application consists of two main panels: **the settings panel** and **the chart panel**, allowing intuitive management of input data and customization of the musical piece's parameters. If incorrect data is provided, an error message is displayed with appropriate guidance.  
 
-![Panel Ustawień](link)      
-![Panel Wykresu](link)
+<p align="center">
+  <img src="images/tcf1.png" alt="Figure 1 - Settings panel" width="45%">
+  <img src="images/dcf1.png" alt="Figure 2 - Plot panel" width="45%">
+</p> 
 
 ### Input Data Handling
 - **Loading CSV files** – done via the **Load CSV** button and selecting a `.csv` file.  
@@ -19,123 +21,131 @@ The application consists of two main panels: **the settings panel** and **the ch
 - Ability to select a column defining the size of the dots on the chart.  
 - Option to flip the chart along the X and Y axes for better view adjustment. 
 
-### Normalizacja i stopień swobody
-- Normalizacja danych wzdłuż wybranej osi.  
-- Skalowanie nieliniowe z regulacją stopnia swobody, co pozwala na kompresję lub ekspansję danych.  
+### Normalization and Degree of Freedom
+- To normalize data along a selected axis, simply choose the desired axis in the dedicated field.  
+- The user can apply nonlinear scaling with an adjustable degree of freedom, allowing for compression or expansion of data along the chosen axis.  
 
-### Właściwości utworu
-- Określenie długości utworu w bitach poprzez znacznik konwersji.  
-- Regulacja wysokości nuty w zależności od wartości:
-  - **Rosnące** – wyższa wartość = niższy dźwięk.  
-  - **Malejące** – wyższa wartość = wyższy dźwięk.  
-- Regulacja głośności nuty:
-  - **Rosnące** – wyższa wartość = głośniejsza nuta.  
-  - **Malejące** – wyższa wartość = cichsza nuta.  
-  - **Stały poziom** – głośność niezależna od wartości.  
-- Możliwość ręcznego ustawienia **BPM** (domyślnie 60).  
-- Definiowanie zakresu nut oraz minimalnej i maksymalnej głośności (0-127, format MIDI).  
+### Track Properties
+- To determine the track length in beats, select the appropriate conversion marker (**Time/beat** field) and divide it by the highest value in the column corresponding to track length.  
+- To set how note pitch depends on values, choose an option in the **Pitch** menu:
+  - **Increasing** – higher value = lower pitch.  
+  - **Decreasing** – higher value = higher pitch.  
+- To set how note volume depends on values, choose an option in the **Velocity** menu:
+  - **Increasing** – higher value = louder note.  
+  - **Decreasing** – higher value = quieter note.  
+  - **Fixed level** – volume remains unchanged, always set to the value in the **Max volume** field.  
+- User can set the **BPM** value (default: 60).  
+- Define the note range and set the minimum and maximum volume in the **Min volume** and **Max volume** fields (0-127, MIDI format).  
 
-### Generowanie i odtwarzanie pliku MIDI
-- **Zapis do MIDI** – przycisk **Zapisz jako MIDI** wyświetla okienko dla podania nazwy pliku, po czym zapisuje wynik.  
-- **Odtwarzanie** – przycisk **Odtwórz utwór** wyświetla okienko do wyboru pliku MIDI po czym go odtwarza.  
+### MIDI File Generation and Playback
+- **Save as MIDI** – the **Save as MIDI** button opens a window to enter the file name and saves the result.  
+- **Playback** – the **Play Track** button opens a window to select a MIDI file and plays it.    
 
-## Struktura plików i biblioteki
+## File Structure and Libraries
 
-Aplikacja wykorzystuje następujące biblioteki:
+The application uses the following libraries:
 
-- **Interfejs użytkownika**: `Tkinter`
-- **Przetwarzanie danych**: `Pandas`
-- **Wizualizacja**: `Matplotlib`
-- **Praca z dźwiękiem**: `MIDIUtil`, `Pygame`
+- **User Interface**: `Tkinter`
+- **Data Processing**: `Pandas`
+- **Visualization**: `Matplotlib`
+- **Audio Processing**: `MIDIUtil`, `Pygame`
 
-### Struktura plików
+### File Structure
 
-- **`mapping.py`** – funkcje do mapowania wartości:
-  - `map_range` – przekształca wartości wejściowe na nowy zakres.
-  - `map_data` – oblicza minimalną i maksymalną wartość w liście wejściowej.
+- **`mapping.py`** – functions for mapping values:
+  - `map_range` – converts input values to a new range.
+  - `map_data` – calculates the minimum and maximum values in an input list.
 
-- **`mid.py`** – konwersja nut:
-  - `str2midi` – konwertuje nazwę nuty na numer MIDI.
-  - `midi2str` – konwertuje numer MIDI na nazwę nuty.
+- **`mid.py`** – note conversion:
+  - `str2midi` – converts a note name to a MIDI number.
+  - `midi2str` – converts a MIDI number to a note name.
 
-### Główne funkcje aplikacji
+### Main Application Functions
 
-#### **Ładowanie i przetwarzanie danych**
-- `load_csv()` – wczytuje dane z pliku CSV.
-- `update_choice(axis, value)` – wybiera kolumnę danych dla osi X, Y lub wartości odpowiadającej wielkości dźwięku.
-- `apply_axis_reversal()` – odwraca wartości na osiach X i Y.
-- `apply_normalization()` – normalizuje wartości do przedziału `[0,1]`.
-- `apply_power()` – transformuje wartości z użyciem stopnia swobody.
-- `calculate_bit_data()` – przelicza długość dźwięków na podstawie wybranej kolumny.
+#### **Loading and Processing Data**
+- `load_csv()` – loads data from a CSV file.
+- `update_choice(axis, value)` – selects a data column for X, Y axis, or sound size.
+- `apply_axis_reversal()` – reverses values on the X and Y axes.
+- `apply_normalization()` – normalizes values to the range `[0,1]`.
+- `apply_power()` – transforms values using the degree of freedom.
+- `calculate_bit_data()` – calculates note durations based on a selected column.
 
-#### **Interfejs użytkownika**
-- `create_widgets()` – tworzy elementy interfejsu, takie jak przyciski i menu.
-- `configure_grid()` – dynamicznie skaluje okno i dostosowuje je do zawartości.
+#### **User Interface**
+- `create_widgets()` – creates interface elements like buttons and menus.
+- `configure_grid()` – dynamically scales and adjusts the window layout.
 
-#### **Generowanie dźwięku i plików MIDI**
-- `save_midi()` – zapisuje dane do pliku MIDI.
-- `play_midi()` – odtwarza plik MIDI za pomocą `pygame`.
+#### **Generating and Playing MIDI Files**
+- `save_midi()` – saves data to a MIDI file.
+- `play_midi()` – plays a MIDI file using `pygame`.
 
-#### **Wizualizacja danych**
-- `update_plot()` – rysuje wykres z uwzględnieniem normalizacji i transformacji.
+#### **Data Visualization**
+- `update_plot()` – draws a plot with normalization and transformations applied.
 
-## Przykład zastosowania narzędzia
+## Example Use Case
 
-### Sonifikacja danych dotyczących rytmu serca
+### Sonification of Heartbeat Data
 
-Celem tego przykładu jest przekształcenie danych sekwencyjnych opisujących rytm serca w dźwięk, tak aby anomalie były łatwe do usłyszenia.  
+This example converts sequential heartbeat data into sound, making anomalies easier to detect.  
 
-Założenia sonifikacji:  
-- **Czas pomiaru** → odpowiada długości generowanego utworu.  
-- **Interwał tętna (czas między kolejnymi uderzeniami serca)** → determinuje wysokość dźwięku:  
-  - Większe interwały → **wyższe dźwięki**,  
-  - Mniejsze interwały → **niższe dźwięki**.  
-- **Stała głośność** → aby zachować czytelność brzmienia.  
+Sonification assumptions:  
+- **Measurement time** → determines the length of the generated track.  
+- **Heartbeat interval (time between beats)** → determines pitch:  
+  - Longer intervals → **higher pitch**,  
+  - Shorter intervals → **lower pitch**.  
+- **Fixed volume** → to maintain clarity of the sound.  
 
-W ten sposób **zarówno zbyt duże, jak i zbyt małe interwały** będą słyszalne jako odchylenia od normy.  
+In this way, **both too large and too small intervals** will be heard as deviations from the norm.  
 
-**Rysunek 7**: Panel ustawień po zaimportowaniu danych.  
-![Rysunek 7 - Panel ustawień](placeholder.png)  
+<table align="center">
+  <tr>
+    <td align="center">
+      <img src="images/the1.png" width="45%"><br>
+      <b>Figure 3 - Settings panel after importing data</b>
+    </td>
+    <td align="center">
+      <img src="images/dhe1.png" width="45%"><br>
+      <b>Figure 4 - Plot panel after importing data</b>
+    </td>
+  </tr>
+</table>
 
-**Rysunek 8**: Panel wykresu po zaimportowaniu danych.  
-![Rysunek 8 - Panel wykresu](placeholder.png)  
-
----
-
-### 1. Skalowanie danych
-Ponieważ dane są już w odpowiednim zakresie i nie wymagają dodatkowej obróbki, **nie stosujemy**:  
-- **Odwracania wartości na osiach X i Y**,  
-- **Rozciągania wartości**,  
-- **Modyfikacji zakresu poprzez stopień swobody**.  
-
-Zostawiamy wszystkie **checkboxy odznaczone**, a pole **Stopień swobody** puste.
 
 ---
 
-### 2. Ustawienia muzyczne
-Aby uzyskać naturalne odwzorowanie rytmu serca w dźwięku, stosujemy:   
-- **Tempo = 180 BPM** → taki **BPM** skraca odstępy między nutami i pozwala na szybszą i łatwiejszą analizę danych.
+### 1. Scaling the Data
+Since the data is already in the correct range, **we do not apply**:  
+- **Reversing values on the X and Y axes**,  
+- **Stretching values**,  
+- **Modifying the range with the degree of freedom**.  
+
+All **checkboxes remain unchecked**, and the **Degree of freedom** field is left empty.
 
 ---
 
-### 3. Zakres nut i głośność
-Określamy ramy głośności i wybieramy **zakres nut** (zakres może być dowolny, ale w moim przypadku wybrałem taki):  
+### 2. Musical Settings
+To obtain a sonically comfortable representation of the heartbeat in sound, we apply:  
+- **Tempo = 180 BPM** → this **BPM** shortens gaps between notes, making the data easier to analyze.
+
+---
+
+### 3. Note Range and Volume
+We define volume settings and select a **note range** (this range is flexible, but I chose the following):  
  
 `C1, E2, F2, A2, C3, D3, G3, B3, D4, F4, A4, B4, D5, G5, A5, C6, D6, E6, F#6, G6, A6`  
 
-Zakres ten obejmuje dźwięki w szerokim spektrum wysokości, co pozwala dobrze oddać różnice w rytmie serca.
+This range covers a wide spectrum of pitches, effectively highlighting variations in heartbeat rhythm.
 
-Głośność jest **stała**, co ułatwia wychwycenie zmian w tonacji dźwięków bez wpływu natężenia dźwięku.
+The volume is **fixed**, making changes in tone more distinguishable without interference from loudness variations.
 
 ---
 
-### 4. Zapis i odsłuchanie utworu
-Po ustawieniu wszystkich parametrów:  
-1. **Zapisujemy wynik** do pliku MIDI, aby móc go później przeanalizować.  
-2. **Odtwarzamy utwór** ręcznie lub poprzez przycisk.
+### 4. Saving and Playing the Track
+After setting all parameters:  
+1. **Save the result** as a MIDI file for further analysis.  
+2. **Play the track** manually or using the play button.
 
 <p align="center">
-  <img src="placeholder.png" alt="Rysunek 9 - Panel ustawień" width="45%">
-  <img src="placeholder.png" alt="Rysunek 10 - Panel wykresu" width="45%">
-</p>
+  <img src="images/thf1.png" alt="Figure 5 - Settings panel after all transformations" width="45%">
+  <img src="images/dhf1.png" alt="Figure 6 - Plot panel after all transformations" width="45%">
+</p> 
 
