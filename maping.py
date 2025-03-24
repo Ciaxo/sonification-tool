@@ -13,6 +13,7 @@ def map_data(input_list, newMin, newMax, reverse=False):
     oldMin = min(input_list)
     oldMax = max(input_list)
 
+    # Map the values from the input list to a new range
     if reverse:
         newMin, newMax = newMax, newMin
     return [round((x - oldMin) / (oldMax - oldMin) * (newMax - newMin) + newMin) for x in input_list]

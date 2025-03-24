@@ -104,8 +104,8 @@ class SonificationTool:
         self.update_button = tk.Button(self.master, text="OK", command=self.update)
         self.update_button.grid(row=8, column=2)
 
-        # Field for entering "Time/Bit"
-        self.bit_length_label = tk.Label(self.master, text="Time/Bit:")
+        # Field for entering "Time/Beat"
+        self.bit_length_label = tk.Label(self.master, text="Time/Beat:")
         self.bit_length_label.grid(row=9, column=0)
         self.bit_length_entry = tk.Entry(self.master)
         self.bit_length_entry.grid(row=9, column=1)
@@ -258,17 +258,17 @@ class SonificationTool:
 
     def calculate_bit_data(self):
 
-        """Calculates track length data based on the "Time/Bit" value and the selected column."""
+        """Calculates track length data based on the "Time/Beat" value and the selected column."""
         if self.data is not None and self.bit_length_entry.get():
             try:
-                bit_length = float(self.bit_length_entry.get())  # Get the 'Time/Bit' value.
+                bit_length = float(self.bit_length_entry.get())  # Get the 'Time/Beat' value.
 
                 self.bit_data = self.x_data / bit_length
 
                 self.bit_data -= min(self.bit_data)  # Shifting the minimum value to 0
 
             except ValueError:
-                messagebox.showerror("Error", "The 'Time/Bit' value must be a number.")
+                messagebox.showerror("Error", "The 'Time/Beat' value must be a number.")
 
     def update_plot(self):
         """Updates the chart, displaying normalized data and column names."""
