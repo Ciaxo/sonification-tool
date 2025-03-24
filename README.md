@@ -50,7 +50,7 @@ The application consists of two main panels: **the settings panel** and **the pl
 
 ### MIDI File Generation and Playback
 - **Save as MIDI** – the **Save as MIDI** button opens a window to enter the file name and saves the result.  
-- **Playback** – the **Play Track** button opens a window to select a MIDI file and plays it.    
+- **Play Track** – the **Play Track** button opens a window to select a MIDI file and plays it.    
 
 ## File Structure and Libraries
 
@@ -64,8 +64,8 @@ The application uses the following libraries:
 ### File Structure
 
 - **`mapping.py`** – functions for mapping values:
-  - `map_range` – converts input values to a new range.
-  - `map_data` – calculates the minimum and maximum values in an input list.
+  - `map_range` – maps values from an input array to a new range, returning floating-point results.
+  - `map_data` – maps values from an input list to a new range, optionally reversing the mapping, and returns a list of rounded integers.
 
 - **`mid.py`** – note conversion:
   - `str2midi` – converts a note name to a MIDI number.
@@ -75,7 +75,7 @@ The application uses the following libraries:
 
 #### **Loading and Processing Data**
 - `load_csv()` – loads data from a CSV file.
-- `update_choice(axis, value)` – selects a data column for X, Y axis, or sound size.
+- `update_choice(axis, value)` – updates the value selection for the chosen axis and refreshes normalization.
 - `apply_axis_reversal()` – reverses values on the X and Y axes.
 - `apply_normalization()` – normalizes values to the range `[0,1]`.
 - `apply_power()` – transforms values using the degree of freedom.
@@ -135,12 +135,12 @@ All **checkboxes remain unchecked**, and the **Degree of freedom** field is left
 
 ### 2. Musical Settings
 To obtain a sonically comfortable representation of the heartbeat in sound, we apply:  
-- **Tempo = 180 BPM** → this **BPM** shortens gaps between notes, making the data easier to analyze.
+- **Tempo = 180 BPM** → this **BPM** shortens gaps between notes, making the data easier and faster to analyze.
 
 ---
 
 ### 3. Note Range and Volume
-We define volume settings and select a **note range** (this range is flexible, but I chose the following):  
+Now define volume settings and select a **note range** (this range is flexible, but I chose the following):  
  
 `C1, E2, F2, A2, C3, D3, G3, B3, D4, F4, A4, B4, D5, G5, A5, C6, D6, E6, F#6, G6, A6`  
 
@@ -153,7 +153,7 @@ The volume is **fixed**, making changes in tone more distinguishable without int
 ### 4. Saving and Playing the Track
 After setting all parameters:  
 1. **Save the result** as a MIDI file for further analysis.  
-2. **Play the track** manually or using the play button.
+2. **Play the track** manually or using the **play track** button.
 
 <table align="center" style="border-collapse: collapse; border: none;">
   <tr>
