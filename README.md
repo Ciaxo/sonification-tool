@@ -2,6 +2,13 @@
 
 To better understand sonification, I created a tool with a simple graphical interface for sonifying numerical data.  
 
+## Table of Contents
+
+- [Project Description](#project-description)
+- [File Structure and Libraries](#file-structure-and-libraries)
+- [Example Use Case](#example-use-case)
+- [See also](#see-also)
+
 ## Project Description
 
 <p align="center" style="border-collapse: collapse; border: none;">
@@ -170,3 +177,5 @@ After setting all parameters:
 
 ## See also
 - [sonification-tutorials](https://github.com/SYSTEMSounds/sonification-tutorials?tab=readme-ov-file)
+
+- 
