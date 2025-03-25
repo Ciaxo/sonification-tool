@@ -178,4 +178,4 @@ After setting all parameters:
 ## See also
 - [sonification-tutorials](https://github.com/SYSTEMSounds/sonification-tutorials?tab=readme-ov-file)
 
-- 
+
